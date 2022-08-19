@@ -15,4 +15,4 @@ Aplikasi ini dibangun menggunakan :
 - Firebase
 
 ## Tutorial
-Untuk proses pembuatan aplikasi ikuti [Steps]() ini.
+Untuk proses pembuatan aplikasi ikuti [Steps](https://github.com/anggaprsada/crud-firebase-kotlin/tree/main/Tutorial) ini.
