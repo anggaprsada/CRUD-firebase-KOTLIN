@@ -19,7 +19,7 @@ Terlebih dahulu kalian pastikan database sudah terdaftar pada firebase:
 ```
 - Kemudian Publish
 
-[Create](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Create.md)
-[Read](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Read.md)
-[Update](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Update.md)
-[Delete](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Delete.md)
+[Create](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Create.md)<br/>
+[Read](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Read.md)<br/>
+[Update](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Update.md)<br/>
+[Delete](https://github.com/anggaprsada/crud-firebase-kotlin/blob/main/Tutorial/CRUD/Delete.md)<br/>
