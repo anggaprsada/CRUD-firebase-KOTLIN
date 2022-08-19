@@ -17,7 +17,8 @@ firebaseAuth.createUserWithEmailAndPassword(email,pass)
                         } else {
                             Toast.makeText(this, it.exception.toString(), Toast.LENGTH_LONG).show()
                         }
-                    }
-                    ```
+}
+```
+
 
 
