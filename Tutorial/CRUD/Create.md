@@ -58,6 +58,6 @@ Kemudian untuk menginputkan data ke database dengan cara berikut pada <code tran
                     .addOnFailureListener { err ->
                             Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
                     }
-    }
+        }
 }
  ```
