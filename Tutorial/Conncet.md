@@ -15,6 +15,17 @@ Agar dapat menambahkan Firebase ke aplikasi Android, Anda perlu membuat project 
   + Tambahkan file konfigurasi Andoid ke aplikasi
     - Klik Download google-services.json untuk mendapatkan file konfigurasi Android Firebase Anda (google-services.json).
     - Pindahkan file konfigurasi ke direktori modul (level aplikasi) aplikasi Anda.
-    - ![resources/logo-artivisi.png](https://www.gstatic.com/mobilesdk/160426_mobilesdk/images/android_studio_project_panel@2x.png))
+    - ![resources/logo-artivisi.png](https://www.gstatic.com/mobilesdk/160426_mobilesdk/images/android_studio_project_panel@2x.png)
   + Untuk mengaktifkan produk Firebase di aplikasi, tambahkan [plugin google-services](https://developers.google.com/android/guides/google-services-plugin) ke file Gradle.
 * Tambahkan Firebase SDK ke aplikasi
+  + Dalam file Gradle level root (level project), build.gradle, tambahkan aturan untuk menyertakan plugin Gradle Layanan Google. Pastikan Anda juga memiliki repositori Maven Google.
+  ```kotlin
+  buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.13'
+    }
+  }
+  ```
