@@ -14,3 +14,5 @@ Aplikasi ini dibangun menggunakan :
 - Android Studio Chipmunk//2021.2.1
 - Firebase
 
+## Tutorial
+Untuk proses pembuatan aplikasi ikuti [Steps]() ini.
