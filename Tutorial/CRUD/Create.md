@@ -43,14 +43,21 @@ Karena kita menggunakan database <code translate="no" dir="ltr">Singapore</code>
 
 Kemudian untuk menginputkan data ke database dengan cara berikut pada <code translate="no" dir="ltr">SignUp.kt</code>
  ```kotlin
- class SignUp : AppCompatActivity() {...}
+ class SignUp : AppCompatActivity() {
+        //...
+        override fun onCreate(savedInstanceState: Bundle?) {
+        //...
+        }
+        private fun saveData() {
+        //...
+        val mhs = Mahasiswa(nim,fullname,prodi,phone,email,pass)
+        dbRef.child(nim).setValue(mhs)
+            .addOnCompleteListener {
+                //...
+            }
+            .addOnFailureListener { err ->
+                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+            }
+    }
+}
  ```
-
-## Read
-
-## Update
-
-## Delete
-
-
-<code translate="no" dir="ltr">SignUp.kt</code>
