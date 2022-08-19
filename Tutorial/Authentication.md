@@ -6,8 +6,20 @@ Anda membuat pengguna baru di project Firebase dengan memanggil metode <code tra
 
 inisiasikan terlebih dahulu
 ```kotlin
-val email = binding.etEmail.text.toString()
-val pass = binding.etPassword.text.toString()
+class SignUp : AppCompatActivity() {
+    private lateinit var binding: ActivitySignUpBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+    //...
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val email = binding.etEmail.text.toString()
+        val pass = binding.etPassword.text.toString()
+        //...
+    }
+}
 ```
 kode ini berada di  <code translate="no" dir="ltr">SignUp.kt</code> di dalam button  <code translate="no" dir="ltr">setClickListener</code>
 ```kotlin
@@ -26,5 +38,13 @@ firebaseAuth.createUserWithEmailAndPassword(email,pass)
                       }
 ```
 
+Intent tersebut ketika terdaftar akan merujuk langsung ke Main menu
+```kotlin
+Intent(this, SignIn::class.java).also {
+  it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+  startActivity(it)
+  Toast.makeText(this, "Success Sign Up", Toast.LENGTH_LONG).show()
+}
+```
 
 
