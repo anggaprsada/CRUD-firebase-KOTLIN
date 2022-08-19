@@ -29,3 +29,12 @@ Agar dapat menambahkan Firebase ke aplikasi Android, Anda perlu membuat project 
     }
   }
   ```
+  + Dalam file Gradle modul (level aplikasi), biasanya app/build.gradle, terapkan plugin Gradle Layanan Google:
+  ```kotlin
+  plugins {
+    //...
+    id 'com.google.gms.google-services'
+  }
+
+  android 
+  ```
