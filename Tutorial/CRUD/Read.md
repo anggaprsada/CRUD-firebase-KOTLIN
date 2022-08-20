@@ -1,6 +1,11 @@
 ## Read
-Hal pertama yang harus dilakukan adalah membuat Activity <code translate="no" dir="ltr">MainMenu.kt</code> untuk menampilkan Data melalui Recycle View,<code translate="no" dir="ltr">Adapter</code> Untuk koneksikan database dengan aplikasi, <code translate="no" dir="ltr">Layout List</code> untuk data yang ditampilkan didalam Recycle View, Activity <code translate="no" dir="ltr">Edit.kt.kt</code> untuk melihat data profile secara menyeluruh.</br>
+Hal pertama yang harus dilakukan adalah membuat :
+- Activity <code translate="no" dir="ltr">MainMenu.kt</code> untuk menampilkan Data melalui Recycle View,
+- <code translate="no" dir="ltr">Adapter</code> Untuk koneksikan database dengan aplikasi, 
+- <code translate="no" dir="ltr">Layout List</code> untuk data yang ditampilkan didalam Recycle View
+- Activity <code translate="no" dir="ltr">Edit.kt.kt</code> untuk melihat data profile secara menyeluruh.</br>
 
+Kode :
 - <code translate="no" dir="ltr">Adapter</code>
 ```kotlin
 class mhsAdapter(private val mhsList: ArrayList<Mahasiswa>):
