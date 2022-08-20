@@ -96,33 +96,6 @@ Kode :
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="You don't have Account?"
-        android:textAlignment="center"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
-        app:layout_constraintVertical_bias="0"/>
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/teal_200"
-        android:text="REGISTER"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegister"
-        app:layout_constraintVertical_bias="0" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 -Layout activity main.xml
@@ -164,20 +137,6 @@ Kode :
         app:layout_constraintVertical_bias="0"
         android:layout_marginTop="10dp"/>
 
-    <TextView
-        android:id="@+id/tvHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hasil"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvPass"
-        app:layout_constraintVertical_bias="0"
-        android:layout_marginTop="10dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 - Activity Login.kt
@@ -206,6 +165,32 @@ class Login : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtras(bundle)
             startActivity(intent)
+        }
+    }
+}
+```
+- Activity MainActivity.kt
+```kotlin
+class MainActivity : AppCompatActivity() {
+    lateinit var tvEmail : TextView
+    lateinit var tvPass : TextView
+    lateinit var tvHasil : TextView
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        tvEmail = findViewById(R.id.tvEmail)
+        tvPass = findViewById(R.id.tvPass)
+        tvHasil = findViewById(R.id.tvHasil)
+
+        if(intent.extras != null) {
+            val bundle = intent.extras
+            tvEmail.setText(bundle?.getString("email"))
+            tvPass.setText(bundle?.getString("password"))
+            
+        } else {
+            tvEmail.setText(bundle?.getStringExtra("email"))
+            tvPass.setText(bundle?.getStringExtra("password"))
         }
     }
 }
